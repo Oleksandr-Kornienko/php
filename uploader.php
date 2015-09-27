@@ -48,7 +48,7 @@ else
     {
         move_uploaded_file($temp,"uploads/".$name);
         echo '<img src="uploads/'.$name.'"><br>';
-        echo 'Upload complete!<br>';
+        echo 'Upload complete!!!<br>';
 
 
     }
