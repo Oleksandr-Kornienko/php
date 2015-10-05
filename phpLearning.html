@@ -1,0 +1,97 @@
+<html>
+  <head>
+        <title>Learning PHP </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="phpLearning.css">
+    </head>
+  <body>
+ <h1 id="Forms">Форми</h1>
+<p>Щоб створити форму, потрібно помістити її в тег &lt;form> тут інформація про форму&lt;/form><br>
+Наприклад ми хочем створити форму з полями Ім'я, фамілія і кнопкою відправити. Для цього пишем всередині форми :<br>
+&lt;input <b>type="text"</b> /> &lt;input type="text" /> i &lt;input type="submit" value="назва кнопки"/><br>
+</p>
+<div class="forms">
+<form>
+Ім'я:<input type="text" /><br>
+Фамілія:<input type="text" /><br>
+<input type="submit" value="назва кнопки"/>
+</form></div>
+<b>Type="radio"</b>:  <br>
+&lt;input type="radio"  value="да"/><br>
+&lt;input type="radio"  value="нет"/><br>
+<form>
+<input type="radio"  value="да" />Да<br>
+<input type="radio"  value="нет" />Нет<br>
+<input type="submit">
+</form>
+<b>Type="checkbox"</b>:<br>
+&lt;input type="checkbox"  value="да"/><br>
+&lt;input type="checkbox" value="нет"/><br>
+&lt;input type="checkbox"  value="возможно"/><br>
+<form>
+
+<input type="checkbox"  value="да" />Да<br>
+<input type="checkbox"  value="нет" />Нет<br>
+<input type="checkbox"  value="возможно" />Возможно<br>
+<input type="submit">
+</form>
+
+<b>textarea</b> :<br>
+&lt;textarea name = "коментарии" rows="3" cols="50"> &lt;/textarea> где rows(row-рядок) - висота, cols - ширина<br>
+<textarea name = "коментарии" rows="3" cols="50"> </textarea><br>
+<b>select</b> :<br>
+&lt;select name="lists" ><br>
+&lt;option >Список 1&lt;/option><br>
+&lt;option>Список 2&lt;/option><br>
+&lt;option>Список 3&lt;/option><br>
+ &lt;/select><br>
+<select name="characters" >
+<option >Список 1</option>
+<option>Список 2</option>
+<option>Список 3</option>
+ </select><br>
+Щоб елементи input окружити рамочкою використовують тег fieldset:<br>
+&lt;fieldset><br>
+&lt;input type="checkbox"  value="да"/><br>
+&lt;input type="checkbox" value="нет"/><br>
+&lt;input type="checkbox"  value="возможно"/><br>
+&lt;/fieldset>
+<fieldset>
+<input type="checkbox"  value="да" />Да<br>
+<input type="checkbox" value="нет" />Нет<br>
+<input type="checkbox"  value="возможно" />Возможно<br>
+<input type="submit">
+</fieldset>
+<br>
+Також можна вставити назву з допомогою тегу legend :<br>
+&lt;fieldset><br>
+&lt;legend>Ваш вибір&lt;/legend><br>
+&lt;input type="checkbox"  value="да"/><br>
+&lt;input type="checkbox"  value="нет"/><br>
+&lt;input type="checkbox"  value="возможно"/><br>
+&lt;/fieldset><br>
+<fieldset>
+<legend>Ваш вибір</legend>
+<input type="checkbox"  /><label for="yes">Так</label><br>
+
+<input type="checkbox"  /><label for="no">Ні</label><br>
+<input type="checkbox" />
+<label for="maybe">Можливо</label><br>
+
+<input type="submit">
+</fieldset>
+<br>
+Для вибору файлу з компютеру використовують &lt;input type="file"/>:<br>
+<input type="file"/><br>
+      
+<div class="part2"> Для виводу повідомлень використовують команду echo в одинарних або двійних лапках :<br>
+    echo 'привіт!' або echo "привіт!"</div><br>
+    <b>Данні в php</b> позначаються так - $назваДанної, або так$назва_Данної<br>
+    Якщо потрібно отримати <b>запит від серверу</b>, в формі пишуть - action="файл.php" method="POST"<br>
+    і тоді отримуєм запит - $firstName=$_POST['firstName'];<br>
+    З допомогою команди echo можна <b>виводити змінні і робити перевід строки</b>, при цьому &lt;br> треба взяти в лапки: <br>
+    echo $firstName.'&lt;br>';<br>
+    а данні з'єднуються крапками.<br>
+  
+  </body>
+</html>
